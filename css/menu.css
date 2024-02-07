@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: row wrap;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    background-color: #231942
+}
+
+.title {
+    display: flex;
+    flex: 10%;
+    margin-right: 20%;
+    margin-left: 5%;
+    justify-content: center;
+    width: 5%;
+    text-align: center;
+    animation: heartbeat 2s infinite;
+}
+
+.nav-link {
+    display: flex;
+    flex: 60%;
+    flex-direction: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+
+.link_item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 50px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 40px;
+}
+
+
+
+.link_item:hover {
+    color: yellow;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-link {
+        flex: 100%;
+        width: 100%;
+        transition: max-height 0.8s ease;
+    }
+
+
+
+    .title {
+        flex: 100%;
+        margin: 0;
+        padding: 20px;
+        width: 20%;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .nav {
+
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+        height: auto;
+
+    }
+
+    /* Ocultar .nav-link por padrão em telas menores */
+    .nav-link {
+        display: flex;
+        /* Inicialmente, defina como flex em vez de none */
+        align-items: center;
+        flex-direction: column;
+        max-height: 0;
+        /* Comece com altura zero */
+        overflow: hidden;
+        /* Ocultar conteúdo que excede a altura zero */
+        transition: max-height 0.8s ease;
+        /* Adicione uma transição suave */
+    }
+
+
+    .title {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        width: 30%;
+        padding: 30px;
+        justify-content: center;
+    }
+
+    
+
+    .nav:hover .nav-link {
+        max-height: 500px;
+    }
+
+    .nav:focus~.nav-link {
+        height: 500px;
+    }
+}

@@ -1,0 +1,263 @@
+body {
+    background-color: #E0B1CB;
+    margin: 0;
+    border: 0;
+    font-family: 'Yeseva One';
+    max-width: 100%;
+}
+
+
+section {
+    padding: 200px 100px 200px 100px;
+
+}
+
+h1 {
+    align-items: center;
+    text-align: center;
+    font-size: 300%;
+    color: #231942;
+}
+
+.Container-card-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.cards img {
+    width: 300px;
+    height: auto;
+    transition: 0.35s ease;
+    border-radius: 14px;
+}
+
+.cards img:hover {
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+}
+
+.produtos {
+    text-align: center;
+    margin: 70px;
+    background-color: #231942;
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.container {
+    display: inline-block;
+    margin: 10px;
+}
+
+.produto {
+    background-color: #5E548E;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.imagem {
+    margin: auto;
+}
+
+.imagem-produto {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nome-produto {
+    color:#FFEE5C;
+    margin-top: 10px;
+}
+
+.detalhes p {
+    color: WHITE;
+    margin: 10px;
+}
+
+
+.detalhes button {
+    background-color: #BE95C4;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    border-radius: 40px;
+    color: #3d2759;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+.detalhes button:hover {
+    transform: scaleY(1.2);
+    color: #FFEE5C  ;
+    background-color: #3d2759       ;
+}
+
+#voltar{
+    width: 70px;
+}
+
+
+@media only screen and (max-width: 600px) {  
+
+    section {
+        padding: 0px;
+    }
+
+    .Container-card-1 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .cards img {
+        width: 150px;
+    }
+
+    .produto{
+        display: flex;
+    }
+
+    .produtos{
+        margin: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        gap: 10px;
+        justify-content: center;
+        width: auto;
+    }
+
+    .imagem{
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .nome-produto{
+        font-size: 15px;
+    }
+
+    .detalhes p{
+        font-size: 13px;
+    }
+
+    .detalhes button{
+        padding: 5px 10px 10px 5px;
+        font-size: 10px;
+    }
+}
+
+/* tablets e grandes celulares */
+@media only screen and (min-width: 600px) {
+    section {
+        padding: 100px 50px 100px 50px;
+    }
+    
+    .Container-card-1 {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .cards img {
+        width: 180px;
+    }
+
+    .produtos{
+        margin: 40px;
+        display: grid;
+        grid-template-columns: 1fr  1fr 1fr;
+        gap: 10px;
+        justify-content: center;
+        width: auto;
+    }
+
+    .informacoes{
+        width: 50%;
+    }
+
+    .imagem{
+        width: 100%;
+        height: auto;
+        margin: 2%;
+    }
+
+    .nome-produto{
+        font-size: 80%;
+    }
+
+    .detalhes p{
+        font-size: 80%;
+    }
+
+    .detalhes button{
+        padding: 10% 20% 10% 20%;
+        font-size: 60%;
+    }
+}
+
+/* para dispositivos medianos */
+@media only screen and (min-width: 768px) {
+    section {
+        padding: 100px;
+    }
+
+    .Container-card-1 {
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+    }
+
+    .cards img {
+        width: 150px;
+        gap: 5px;
+    }
+
+    
+
+    .imagem{
+        width: 50%;
+        height: auto;
+        margin: 5%;
+    }
+}
+
+
+
+/* grandes telas */
+@media only screen and (min-width: 1440px) {
+
+    .Container-card-1 {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+    }
+    .cards img {
+        width: 230px;
+    }
+
+    .detalhes button{
+        padding: 9% 20%;
+        font-size: 80%;
+    }
+
+    .imagem{
+        width: 50%;
+        height: auto;
+        margin: 5%;
+    }
+}
